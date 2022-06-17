@@ -2,7 +2,8 @@
 *프로젝트명: 반려동물 종합 포털 시스템(나만 없어 반려동물)  
 *웹페이지명: 스니프로(SniffPro)   
 *사용IDE: Eclipse(ver.2022.03), Sql Developer  
-*사용기술: Spring,Java,Oracle,BootStrap    
+*사용기술: Spring,Java,Oracle,BootStrap  
+*소요기간: 2022.06.17~
   
 *데이터베이스 업무정리  
   1.회원은 본인의 개인 정보를 시스템에 등록하며, 일반 회원과 관리자로 구분된다.  
