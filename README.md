@@ -19,7 +19,8 @@
 
 *테이블 관계도  
 
-![테이블관계도(회원)](https://user-images.githubusercontent.com/52398783/174242611-b66e05e2-22be-41d5-a46f-659159bde33d.png)
+![테이블관계도(최종)](https://user-images.githubusercontent.com/52398783/175249238-22cadde0-418d-4ad0-8645-a57c7d9611fd.png)
+
 
 
  
