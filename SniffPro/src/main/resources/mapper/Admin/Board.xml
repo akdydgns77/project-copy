@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="Pkg.Admin.BoardList">
+
+	<select id="BoardList" resultMap="Pkg.Admin.maps.BoardMap" parameterType="Pkg.Admin.DTO.BoardDTO" statementType="CALLABLE">
+		{
+			call PKG_BOARD.PROC_SEL_BOARD(
+				#{bIdx, jdbcType= VARCHAR, mode=IN},
+				#{bTitle, jdbcType= VARCHAR, mode=IN},
+				#{bContent, jdbcType= VARCHAR, mode=IN},
+				#{usignId, jdbcType= VARCHAR, mode=IN},
+				#{bmId, jdbcType= VARCHAR, mode=IN},
+				#{result, mode=OUT, jdbcType=CURSOR, javaType=ResultSet, resultMap=Pkg.Admin.maps.BoardMap}
+			)
+		}
+	</select>
+</mapper>

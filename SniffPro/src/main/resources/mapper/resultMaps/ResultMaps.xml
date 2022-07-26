@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="Pkg.Admin.maps">
+
+	<resultMap id="BoardMap" type="Pkg.Admin.DTO.BoardDTO">
+		<result property="bIdx" column="BIDX"/>
+		<result property="bTitle" column="BTITLE"/>
+		<result property="bContent" column="BCONTENT"/>
+		<result property="usignId" column="USIGNID"/>
+		<result property="bmId" column="BMID"/>
+	</resultMap>
+</mapper>
