@@ -1,12 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import = "java.util.List,Pkg.Admin.DTO.UserDTO, Pkg.Admin.Service.UserLoginServiceImpl" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그인 후</title>
 
-<script src="resources/jQuery/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="jscss/js/common.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
 <style>
 
@@ -47,22 +53,31 @@
 
 </style>
 
+
+<%
+	
+	//List<UserLoginServiceImpl> uName = //(List<UserLoginServiceImpl>)request.getAttribute("uName");
+String name=(String)request.getAttribute("name");
+%>
+
 </head>
+
+
 <body>
 
-	
-<form action="loggout.do" method="post">
 	<div class="box1">
-		<span class="box2">oo님</span>
+		<span class="box2">
+			<%=name %>님
+		</span>
 		<span class="box2">반갑습니다.</span>
 		<span class="box3">
-			<input type="submit" class="submitBtn" value="CART" />
+			<input type="button" class="submitBtn" value="CART" />
 		</span>
 		<span class="box3">
-			<input type="submit" class="submitBtn" value="LOGOUT" />
+			<input type="button" class="submitBtn" value="LOGOUT" />
 		</span>
 	</div>
-</form>
+
 </body>
 </html>
 

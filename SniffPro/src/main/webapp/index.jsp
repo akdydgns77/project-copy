@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>입양/분양 Page</title>
+<title>로그인 전</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <style>
@@ -83,10 +83,10 @@ $(function(){
 <form name="form1" method="post">
 	<div class="box1">
 		<span class="box2">
-			&nbsp;&nbsp;&nbsp;ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<input type="text" id="usignId" name="usignId" size="17">
+			&nbsp;&nbsp;&nbsp;ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<input type="text" id="usignId" name="usignId" size="18">
 		</span>
 		<span class="box2">
-			PASS&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<input type="password" id="uPass" name="uPass" size="17">
+			PASS&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<input type="password" id="uPass" name="uPass" size="18">
 		</span>
 		<span>
 			<input type="submit" id="btnLogin" class="submitBtn" value="LOGIN" />

@@ -6,7 +6,7 @@ import java.util.List;
 import Pkg.Admin.DTO.UserDTO;
 
 public interface UserLoginDAO {
-	
+	  
 	public String loginCheck(UserDTO uDto);
 
 }

@@ -13,7 +13,7 @@ import Pkg.Admin.DTO.UserDTO;
 @Repository
 public class UserLoginDAOImpl implements UserLoginDAO{
 
-	
+	 
 	@Autowired
 	private SqlSessionTemplate sqlSession;
 	

@@ -2,7 +2,7 @@ package Pkg.Admin.Service;
 
 import java.util.HashMap;
 import java.util.List;
-
+ 
 
 import javax.servlet.http.HttpSession;
 
@@ -24,9 +24,12 @@ public class UserLoginServiceImpl implements UserLoginService {
 		String uName = userDAO.loginCheck(uDto);
 		 if (uName != null) { // 세션 변수 저장
 		  session.setAttribute("usignId", uDto.getUsignId());
-		  session.setAttribute("uName", uName);
+		  //session.setAttribute("uName", uName);
+		  session.setAttribute("uName", uDto.getuName());
 		}
+		 //System.out.print(uName);
 		 return uName; 
+		 
 	}
 
 	@Override

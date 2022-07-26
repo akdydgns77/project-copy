@@ -1,7 +1,7 @@
 package Pkg.Admin.DTO;
 
 public class UserDTO {
-
+ 
 	private String urId;
 	private String usignId;
 	private String uPass;
