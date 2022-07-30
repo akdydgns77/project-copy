@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="Pkg.Admin.CartList">
+	
+<!-- 
+   <resultMap id = "boardMap2" type = "Pkg.Boards.VO.BoardVO">
+      <result property = "idx" column = "IDX"/>
+      <result property = "title" column = "TITLE"/>
+      <result property = "userID" column = "USERID"/>
+   </resultMap> 
+ -->	
+ 
+	<select id = "selCartList" resultMap = "Pkg.Admin.maps.CartListMap" 
+					parameterType = "Pkg.Admin.DTO.CartDTO" statementType = "CALLABLE">
+		{
+			call PKG_CART.PROC_SEL_CART(
+				#{cIdx, jdbcType = VARCHAR, mode = IN}
+				,#{usignId, jdbcType = VARCHAR, mode = IN}
+				,#{result, mode=OUT, jdbcType=CURSOR, javaType=ResultSet, resultMap=Pkg.Admin.maps.CartListMap}
+			)
+		}
+	</select>
+
+	<select id = "delCartList" parameterType = "Pkg.Admin.DTO.CartDTO" statementType = "CALLABLE">
+		{
+			call PKG_CART.PROC_DEL_CART(
+				#{cIdx, jdbcType = VARCHAR, mode = IN},
+				#{errCode, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String},
+				#{errMsg, mode=OUT, jdbcType=VARCHAR, javaType=java.lang.String}
+			)
+		}
+	</select>
+
+
+</mapper>
